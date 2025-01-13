@@ -1,11 +1,14 @@
 "use client";
 import styled from "styled-components";
+import Link from "next/link";
+import Image from "next/image";
+
+import { FlexRowContainer } from "@/lib/baseComponents.js";
+import SVGContainer from "@/lib/reusableComponents/SVGContainer.jsx";
 import AboutMeSection from "./AboutMeSection.jsx";
 import DescriptionSection from "./DescriptionSection.jsx";
 
 const MainContainer = styled.main`
-	display: flex;
-	flex-direction: row;
 	padding: 5%;
 	gap: 5%;
 	justify-content: space-between;
@@ -14,6 +17,30 @@ const MainContainer = styled.main`
 	@media (max-width: 1100px) {
 		flex-direction: column;
 		text-align: center;
+	}
+`;
+
+const SubContainer = styled(FlexRowContainer)`
+	gap: 5%;
+	justify-content: center;
+
+	@media (max-width: 1100px) {
+		flex-direction: column;
+		text-align: center;
+	}
+`;
+
+const LinkContainer = styled(FlexRowContainer)`
+	margin-top: 5%;
+	gap: 5%;
+	font-size: 34px;
+	text-decoration: ${(props) => (props.navlink ? "underline" : "none")};
+	align-items: center;
+
+	@media (max-width: 1100px) {
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
 	}
 `;
 
@@ -26,14 +53,27 @@ const PageContainer = ({
 }) => {
 	return (
 		<MainContainer>
-			<AboutMeSection
-				name={name}
-				title={title}
-				summary={summary}
-				primarySkills={primarySkills}
-			/>
-
-			<DescriptionSection description={description} />
+			<SubContainer>
+				<AboutMeSection
+					name={name}
+					title={title}
+					summary={summary}
+					primarySkills={primarySkills}
+				/>
+				<DescriptionSection description={description} />
+			</SubContainer>
+			<SubContainer>
+				<LinkContainer navlink={true}>
+					<SVGContainer
+						href={"/portfolio"}
+						svgpath={"forwardarrow"}
+						alt={"Forward Arrow"}
+						text={"Check out my work"}
+						textposition={"left"}
+					/>
+				</LinkContainer>
+				{/* <LinkContainer>Social media</LinkContainer> */}
+			</SubContainer>
 		</MainContainer>
 	);
 };

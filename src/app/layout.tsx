@@ -32,7 +32,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`} // Add the Manrope variable
+				className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`}
+				style={{
+					maxWidth: "1440px",
+					letterSpacing: "0.8px",
+				}}
 			>
 				{children}
 			</body>
