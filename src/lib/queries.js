@@ -8,3 +8,5 @@ export const ABOUT_QUERY = `*[_type == "about"]{
 }`;
 
 export const PRIMARY_SKILLS_QUERY = `*[_type == "skillset"]{primarySkills}`;
+
+export const PORTFOLIO_QUERY = `*[_type == "portfolio"]{projects}`;
