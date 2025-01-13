@@ -1,13 +1,21 @@
-"use client";
-import Link from "next/link";
 import React from "react";
+import PortfolioPageContainer from "./PortfolioPageContainer";
+import { client } from "@/sanity/client";
 
-const Portfolio = () => {
-	return (
-		<div>
-			<Link href="/">back to homepage</Link>
-		</div>
+import { PORTFOLIO_QUERY } from "@/lib/queries";
+import QUERY_OPTIONS from "@/lib/queryOptions";
+
+export default async function IndexPage() {
+	const portfolioResult = await client.fetch(
+		PORTFOLIO_QUERY,
+		{},
+		QUERY_OPTIONS
 	);
-};
+	const portfolio = portfolioResult[0]?.projects;
 
-export default Portfolio;
+	return (
+		<main>
+			<PortfolioPageContainer portfolio={portfolio} />
+		</main>
+	);
+}
