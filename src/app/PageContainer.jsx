@@ -63,7 +63,7 @@ const PageContainer = ({
 				<DescriptionSection description={description} />
 			</SubContainer>
 			<SubContainer>
-				<LinkContainer navlink={true}>
+				<LinkContainer navlink="true">
 					<SVGContainer
 						href={"/portfolio"}
 						svgpath={"forwardarrow"}
