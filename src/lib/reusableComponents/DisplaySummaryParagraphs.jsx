@@ -14,7 +14,12 @@ export const myPortableTextComponents = {
 			>
 				{value.children.map((child, index) => {
 					if (child._type === "span") {
-						// Custom render for spans
+						// Clean up invisible line breaks and extra spaces from text
+						const cleanText = child.text
+							.replace(/(\r\n|\n|\r)/gm, " ")
+							.replace(/\s+/g, " ")
+							.trim();
+
 						return (
 							<span
 								key={index}
@@ -25,7 +30,7 @@ export const myPortableTextComponents = {
 										: "normal",
 								}}
 							>
-								{child.text}
+								{cleanText} {/* Render the cleaned text */}
 							</span>
 						);
 					}
