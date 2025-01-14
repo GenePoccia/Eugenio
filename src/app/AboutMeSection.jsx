@@ -1,8 +1,6 @@
 "use client";
-import { Suspense, lazy } from "react";
 import styled from "styled-components";
 import PrimarySkills from "./PrimarySkills";
-import { Header, SubHeader, Callout } from "@/lib/baseComponents";
 
 const MainContainer = styled.div`
 	flex: 1;
@@ -13,7 +11,16 @@ const MainContainer = styled.div`
 	}
 `;
 
-const Summary = styled(Callout)`
+const Header = styled.h1`
+	font-size: 60px;
+`;
+
+const SubHeader = styled.h2`
+	font-size: 36px;
+`;
+
+const Summary = styled.span`
+	font-size: 18px;
 	font-style: italic;
 `;
 

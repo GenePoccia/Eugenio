@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
 
-import { FlexRowContainer } from "@/lib/baseComponents.js";
-
-const LinkContainer = styled(FlexRowContainer)`
+const LinkContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	margin-top: 2%;
 	gap: 2%;
 	white-space: nowrap;

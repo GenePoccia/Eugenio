@@ -52,7 +52,6 @@ export const SkillTile = ({ skillname, skillicon }) => {
 				<TileImage
 					src={urlFor(skillicon).width().url()}
 					alt={skillname}
-					loading="lazy"
 				/>
 				<Tooltip>{skillname}</Tooltip>
 			</ToopTipContainer>

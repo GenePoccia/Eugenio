@@ -1,7 +1,5 @@
 "use client";
 import styled from "styled-components";
-
-import { FlexRowContainer } from "@/lib/baseComponents.js";
 import SVGContainer from "@/lib/reusableComponents/SVGContainer.jsx";
 import AboutMeSection from "./AboutMeSection.jsx";
 import DescriptionSection from "./DescriptionSection.jsx";
@@ -18,7 +16,9 @@ const MainContainer = styled.main`
 	}
 `;
 
-const SubContainer = styled(FlexRowContainer)`
+const SubContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	gap: 5%;
 	justify-content: center;
 
@@ -28,7 +28,9 @@ const SubContainer = styled(FlexRowContainer)`
 	}
 `;
 
-const LinkContainer = styled(FlexRowContainer)`
+const LinkContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	margin-top: 5%;
 	gap: 5%;
 	font-size: 34px;
