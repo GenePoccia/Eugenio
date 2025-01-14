@@ -1,9 +1,10 @@
 "use client";
 import styled from "styled-components";
 import { SkillTile } from "../lib/reusableComponents/SkillTile";
-import { FlexRowContainer } from "@/lib/baseComponents";
 
-const PrimarySkillsContainer = styled(FlexRowContainer)`
+const PrimarySkillsContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	margin-top: 50px;
 	gap: 10%;
 `;

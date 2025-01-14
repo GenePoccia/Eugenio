@@ -1,9 +1,10 @@
 "use client";
 import styled from "styled-components";
 import SVGContainer from "@/lib/reusableComponents/SVGContainer";
-import { FlexColumnContainer } from "@/lib/baseComponents";
-import { StyledTable, StyledHeader } from "@/lib/baseComponents";
-const MainContainer = styled(FlexColumnContainer)`
+
+const MainContainer = styled.div`
+	display: flex;
+	flex-direction: column;
 	padding: 5%;
 	gap: 5%;
 	width: 100%;
@@ -14,9 +15,14 @@ const MainContainer = styled(FlexColumnContainer)`
 	}
 `;
 
-const Table = styled(StyledTable)``;
+const Table = styled.table`
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 2%;
+`;
 
-const TableHeader = styled(StyledHeader)`
+const TableHeader = styled.th`
+	font-size: 24px;
 	padding: 2%;
 	text-align: left;
 `;
