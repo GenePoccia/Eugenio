@@ -51,6 +51,7 @@ const PortfolioTable = ({ portfolio }) => {
 									alt={"External Link"}
 									text={project.name}
 									textposition={"left"}
+									isportfolioproject={true}
 								/>
 							</TableCell>
 
