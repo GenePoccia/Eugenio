@@ -16,7 +16,14 @@ const LinkContainer = styled(FlexRowContainer)`
 	}
 `;
 
-const SVGContainer = ({ href, svgpath, alt, text, textposition }) => {
+const SVGContainer = ({
+	href,
+	svgpath,
+	alt,
+	text,
+	textposition,
+	isportfolioproject,
+}) => {
 	const rightText = textposition === "right";
 	const leftText = textposition === "left";
 
@@ -29,6 +36,10 @@ const SVGContainer = ({ href, svgpath, alt, text, textposition }) => {
 					alignItems: "center",
 					gap: "0.5rem",
 				}}
+				{...(isportfolioproject && {
+					target: "_blank",
+					rel: "noopener noreferrer",
+				})}
 			>
 				{leftText && <div>{text}</div>}
 				<Image

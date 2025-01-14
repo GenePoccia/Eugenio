@@ -1,7 +1,5 @@
 "use client";
 import styled from "styled-components";
-import Link from "next/link";
-import Image from "next/image";
 
 import { FlexRowContainer } from "@/lib/baseComponents.js";
 import SVGContainer from "@/lib/reusableComponents/SVGContainer.jsx";

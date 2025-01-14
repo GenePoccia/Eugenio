@@ -15,14 +15,12 @@ export default async function IndexPage() {
 	const { name, title, summary, description } = aboutMeResult[0];
 	const { primarySkills } = primarySkillsResult[0];
 	return (
-		<main>
-			<PageContainer
-				name={name}
-				title={title}
-				summary={summary}
-				primarySkills={primarySkills}
-				description={description}
-			/>
-		</main>
+		<PageContainer
+			name={name}
+			title={title}
+			summary={summary}
+			primarySkills={primarySkills}
+			description={description}
+		/>
 	);
 }
