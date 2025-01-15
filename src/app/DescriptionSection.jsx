@@ -1,4 +1,6 @@
 "use client";
+import { useContext } from "react";
+import { AboutContext } from "../contexts/AboutContext";
 import { PortableText } from "@portabletext/react";
 import { myPortableTextComponents } from "../lib/reusableComponents/DisplaySummaryParagraphs";
 
@@ -17,11 +19,13 @@ const PortableTextContainer = styled.div`
 	}
 `;
 
-const DescriptionSection = ({ description }) => {
+const DescriptionSection = () => {
+	const { aboutMe } = useContext(AboutContext);
+
 	return (
 		<PortableTextContainer>
 			<PortableText
-				value={description}
+				value={aboutMe?.description}
 				components={myPortableTextComponents}
 			/>
 		</PortableTextContainer>

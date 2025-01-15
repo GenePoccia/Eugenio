@@ -1,4 +1,6 @@
 "use client";
+import { useContext, useEffect } from "react";
+import { AboutContext } from "../contexts/AboutContext";
 import styled from "styled-components";
 import PrimarySkills from "./PrimarySkills";
 
@@ -24,13 +26,14 @@ const Summary = styled.span`
 	font-style: italic;
 `;
 
-const AboutMeSection = ({ name, title, summary, primarySkills }) => {
+const AboutMeSection = () => {
+	const { aboutMe } = useContext(AboutContext);
 	return (
 		<MainContainer>
-			<Header>{name}</Header>
-			<SubHeader>{title}</SubHeader>
-			<Summary>{summary}</Summary>
-			<PrimarySkills primaryskills={primarySkills}></PrimarySkills>
+			<Header>{aboutMe?.name}</Header>
+			<SubHeader>{aboutMe?.title}</SubHeader>
+			<Summary>{aboutMe?.summary}</Summary>
+			<PrimarySkills />
 		</MainContainer>
 	);
 };
