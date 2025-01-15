@@ -1,6 +1,7 @@
 import React from "react";
 import { AboutContextProvider } from "./AboutContext";
 import { PortfolioContextProvider } from "./PortfolioContext";
+
 export const combineComponents = (...components) => {
 	return components.reduce(
 		(AccumulatedComponents, CurrentComponent) => {
