@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Manrope } from "next/font/google"; // Correctly import Manrope
+import { AppContextProvider } from "../contexts/AppContext";
 import "./globals.css";
 
 // Import the fonts
@@ -31,15 +32,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`}
-				style={{
-					maxWidth: "1440px",
-					letterSpacing: "0.8px",
-				}}
-			>
-				{children}
-			</body>
+			<AppContextProvider>
+				<body
+					className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`}
+					style={{
+						maxWidth: "1440px",
+						letterSpacing: "0.8px",
+					}}
+				>
+					{children}
+				</body>
+			</AppContextProvider>
 		</html>
 	);
 }

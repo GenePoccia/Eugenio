@@ -1,4 +1,6 @@
 "use client";
+import React, { useContext } from "react";
+import { AboutContext } from "../contexts/AboutContext";
 import styled from "styled-components";
 import { SkillTile } from "../lib/reusableComponents/SkillTile";
 
@@ -9,10 +11,12 @@ const PrimarySkillsContainer = styled.div`
 	gap: 10%;
 `;
 
-const PrimarySkills = ({ primaryskills }) => {
+const PrimarySkills = () => {
+	const { primarySkills } = useContext(AboutContext);
+
 	return (
 		<PrimarySkillsContainer>
-			{primaryskills.map((ele, index) => {
+			{primarySkills.map((ele, index) => {
 				return (
 					<SkillTile
 						key={`ele_${index}_${ele?.skillName}`}
