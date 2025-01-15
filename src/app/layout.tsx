@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Manrope } from "next/font/google"; // Correctly import Manrope
+import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import { AppContextProvider } from "../contexts/AppContext";
 import "./globals.css";
 
-// Import the fonts
 const geistSans = Geist({
 	variable: "--font-geist-sans",
 	subsets: ["latin"],
@@ -15,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 const manrope = Manrope({
-	variable: "--font-manrope", // Font variable for Manrope
+	variable: "--font-manrope",
 	subsets: ["latin"],
-	weight: ["300", "400", "600", "800"], // You can specify the weights you need
+	weight: ["300", "400", "600", "800"],
 });
 
 export const metadata: Metadata = {

@@ -30,7 +30,7 @@ export const myPortableTextComponents = {
 										: "normal",
 								}}
 							>
-								{cleanText} {/* Render the cleaned text */}
+								{cleanText}
 							</span>
 						);
 					}
