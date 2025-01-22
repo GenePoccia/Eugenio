@@ -28,6 +28,7 @@ export const myPortableTextComponents = {
 									fontWeight: child.marks?.includes("strong")
 										? "bold"
 										: "normal",
+									padding: child.marks?.includes("strong") ? "5px" : "0px",
 								}}
 							>
 								{cleanText}
