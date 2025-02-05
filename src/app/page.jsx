@@ -72,7 +72,6 @@ const Page = () => {
 							textposition={"left"}
 						/>
 					</LinkContainer>
-					{/* <LinkContainer>Social media</LinkContainer> */}
 				</SubContainer>
 			</MainContainer>
 		)

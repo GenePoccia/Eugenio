@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { AboutContext } from "../contexts/AboutContext";
 import { PortableText } from "@portabletext/react";
 import { myPortableTextComponents } from "../lib/reusableComponents/DisplaySummaryParagraphs";
-
+import SocialMediaContainer from "./SocialMediaContainer";
 import styled from "styled-components";
 
 const PortableTextContainer = styled.div`
@@ -28,6 +28,7 @@ const DescriptionSection = () => {
 				value={aboutMe?.description}
 				components={myPortableTextComponents}
 			/>
+			<SocialMediaContainer />
 		</PortableTextContainer>
 	);
 };

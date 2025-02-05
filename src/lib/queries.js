@@ -4,7 +4,7 @@ export const ABOUT_QUERY = `*[_type == "about"]{
     title, 
     summary, 
     description, 
-    description2 
+    socialMedia
 }`;
 
 export const PRIMARY_SKILLS_QUERY = `*[_type == "skillset"]{primarySkills}`;
