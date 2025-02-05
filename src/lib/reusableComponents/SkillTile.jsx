@@ -26,7 +26,7 @@ const TileImage = styled.img`
 `;
 
 const Tooltip = styled.div`
-	display: none; /* Hidden by default */
+	display: none;
 	position: absolute;
 	bottom: 10px;
 	left: 50%;

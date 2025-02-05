@@ -20,25 +20,24 @@ const MainContainer = styled.main`
 	gap: 10%;
 	justify-content: center;
 	width: 100%;
-
-	@media (max-width: 1100px) {
-		text-align: center;
-	}
 `;
+
+const SocialMediaImage = styled.img``;
+const SocialMediaLink = styled.a``;
 
 const renderSocial = (social, idx) => {
 	return (
-		<a
+		<SocialMediaLink
 			key={idx}
 			href={social.socialMediaURL}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<img
+			<SocialMediaImage
 				src={urlFor(social.socialMediaIcon).width().url()}
 				alt={social.socialMediaName}
 			/>
-		</a>
+		</SocialMediaLink>
 	);
 };
 
