@@ -37,7 +37,6 @@ const LinkContainer = styled.div`
 	margin-top: 5%;
 	gap: 5%;
 	font-size: 34px;
-	text-decoration: ${(props) => (props.navlink ? "underline" : "none")};
 	align-items: center;
 
 	@media (max-width: 1100px) {
@@ -72,7 +71,6 @@ const Page = () => {
 							textposition={"left"}
 						/>
 					</LinkContainer>
-					{/* <LinkContainer>Social media</LinkContainer> */}
 				</SubContainer>
 			</MainContainer>
 		)

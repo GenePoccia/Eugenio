@@ -18,8 +18,8 @@ export const AboutContextProvider = ({ children }) => {
 			QUERY_OPTIONS
 		);
 		const { primarySkills } = primarySkillsResult[0];
-		const { name, title, summary, description } = aboutMeResult[0];
-		setAboutMe({ name, title, summary, description });
+		const { name, title, summary, description, socialMedia } = aboutMeResult[0];
+		setAboutMe({ name, title, summary, description, socialMedia });
 		setPrimarySkills(primarySkills);
 
 		return true;
